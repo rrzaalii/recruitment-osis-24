@@ -7,6 +7,7 @@ body {
     margin: 0;
     padding: 20px;
 }
+
 .container {
     max-width: 600px;
     margin: auto;
@@ -15,25 +16,34 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     text-align: center;
-    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.279)  ;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.279);
 }
+
 .logo {
-    width: 400px;
+    max-width: 100%;
+    height: auto;
     margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 h1 {
     font-size: 24px;
     margin-bottom: 20px;
 }
+
 .form-group {
     margin-bottom: 15px;
     text-align: left;
 }
+
 label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
 }
+
 select {
     width: 100%;
     padding: 10px;
@@ -46,6 +56,7 @@ select {
     -moz-appearance: none;
     position: relative;
 }
+
 select::after {
     content: '▼';
     font-size: 12px;
@@ -55,6 +66,7 @@ select::after {
     top: 50%;
     transform: translateY(-50%);
 }
+
 button {
     width: 100%;
     padding: 10px;
@@ -66,9 +78,11 @@ button {
     margin-top: 10px;
     font-weight: bold;
 }
+
 button:hover {
     background-color: #0056b3;
 }
+
 .loading {
     margin-top: 20px;
     padding: 10px;
@@ -78,16 +92,19 @@ button:hover {
     color: #856404;
     font-weight: bold;
 }
+
 .result {
     margin-top: 20px;
     padding: 20px;
     border-radius: 4px;
     text-align: center;
 }
+
 .accepted {
     background-color: #28a745;
     color: #ffffff;
 }
+
 .rejected {
     background-color: #dc3545;
     color: #ffffff;
