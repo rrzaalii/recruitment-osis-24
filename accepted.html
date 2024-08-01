@@ -7,7 +7,15 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
+    <audio id="pageLoadSound" src="win.mp3"></audio>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var audio = document.getElementById('pageLoadSound');
+            audio.play().catch(error => {
+                console.error('Error playing audio:', error);
+            });
+        });
+    </script>
 <div class="container result accepted">
     <h1>Selamat, Kamu Menuju Seleksi Tahap Selanjutnya!</h1>
     <p>Tetap bersemangat dan berprestasi!</p>
