@@ -34,7 +34,8 @@ const students = {
         "DEVA ANDROMEDA AKBAR PUTRA",
         "ELMO KYO HASMORO",
         "JANITRANA NAFISA DJATMIKO",
-        "KEVIN AVIERY PUTRA NUGROHO"
+        "KEVIN AVIERY PUTRA NUGROHO",
+        "KEANU IBRAHIM"
     ]
 };
 
