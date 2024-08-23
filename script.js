@@ -67,23 +67,13 @@ classSelect.addEventListener('change', function() {
 
 document.getElementById('selectionForm').addEventListener('submit', function(event) {
     event.preventDefault();
-
-    // Periksa waktu saat ini
-    const now = new Date();
-    const accessTime = new Date('2024-08-26T19:00:00+07:00'); // 26 Agustus 2024 pukul 19:00 WIB
-
-    if (now < accessTime) {
-        alert("Anda hanya dapat mengakses hasil seleksi OSIS setelah 26 Agustus 2024 pukul 19:00 WIB.");
-        return; // Hentikan eksekusi kode jika belum mencapai waktu yang ditentukan
-    }
-
     const selectedStudent = studentSelect.value;
     let loadingText = 'Memeriksa hasil';
     loadingDiv.textContent = loadingText;
     loadingDiv.style.display = 'block';
 
     let loadingInterval = setInterval(() => {
-        if (loadingText.endswith('...')) {
+        if (loadingText.endsWith('...')) {
             loadingText = 'Memeriksa hasil';
         } else {
             loadingText += '.';
@@ -94,6 +84,16 @@ document.getElementById('selectionForm').addEventListener('submit', function(eve
     setTimeout(() => {
         clearInterval(loadingInterval);
         loadingDiv.style.display = 'none';
+
+        // Check current date and time
+        const currentDate = new Date();
+        const releaseDate = new Date('2024-08-26T19:00:00+07:00'); // WIB time zone offset
+
+        if (currentDate < releaseDate) {
+            alert('Hasil seleksi OSIS hanya bisa diakses setelah 26 Agustus 2024 pukul 19:00 WIB.');
+            return;
+        }
+
         if (rejectedStudents.includes(selectedStudent)) {
             window.location.href = 'not-accepted.html';
         } else {
