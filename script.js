@@ -34,6 +34,8 @@ const students = {
 };
 
 const rejectedStudents = [
+    "DEVA ANDROMEDA AKBAR PUTRA",
+    "AZKA SHAULA LATHIFA",
     "ARFA YUDISTIRA WASKITO",
     "ASY-SYIFA AMATULLAH AL BAHRI",
     "RAFAA HAMISENO",
