@@ -86,10 +86,10 @@ document.getElementById('selectionForm').addEventListener('submit', function(eve
 
         // Check current date and time
         const currentDate = new Date();
-        const releaseDate = new Date('2024-08-26T19:00:00+07:00'); // WIB time zone offset
+        const releaseDate = new Date('2024-08-26T15:20:00+07:00'); // WIB time zone offset
 
         if (currentDate < releaseDate) {
-            alert('Hasil seleksi OSIS hanya bisa diakses setelah 26 Agustus 2024 pukul 19:00 WIB.');
+            alert('Hasil seleksi OSIS hanya bisa diakses setelah 26 Agustus 2024 pukul 15:20 WIB.');
             return;
         }
 
